@@ -1,0 +1,53 @@
+{
+  "name": "robot-tool-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next dev --turbopack",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fontsource/poppins": "^5.2.5",
+    "@mui/icons-material": "^6.4.9",
+    "@mui/material": "^6.4.9",
+    "@mui/styled-engine-sc": "^6.4.9",
+    "@reduxjs/toolkit": "^2.6.1",
+    "@sendgrid/mail": "^8.1.4",
+    "axios": "^1.8.4",
+    "bcryptjs": "^3.0.2",
+    "config": "^3.3.12",
+    "cookie-parser": "^1.4.7",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "formik": "^2.4.6",
+    "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.1",
+    "next": "^15.2.3",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.10.0",
+    "puppeteer": "^24.4.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "react": "^19.0.0",
+    "react-cookie": "^7.2.2",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.4.0",
+    "react-toastify": "^11.0.5",
+    "redux-thunk": "^3.1.0",
+    "styled-components": "^6.1.16",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "concurrently": "^9.1.2",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.3"
+  }
+}

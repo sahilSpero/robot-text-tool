@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif !important;
+  margin: 0px;
+  background-color: #ffffff !important;
+}
+
+.loginImg {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 525px;
+  min-height: 165px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  flex-flow: wrap;
+  width: 100%;
+  overflow: hidden;
+  /* height: 100vh; */
+  padding: 80px 190px 90px 190px;
+}
+
+.right-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  max-width: 50%;
+}
+
+.right-panel h2 {
+  color: #1f1f1f;
+  margin: 10px 0px;
+  font-size: 40px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.right-panel form {
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 0 !important;
+}
+
+.right-panel form label {
+  margin-bottom: 5px;
+}
+
+.right-panel form button {
+  height: 56px;
+}
+
+.right-panel h2 span {
+  color: #1f1f1f;
+  display: block;
+  font-weight: bold;
+  font-family: Work Sans;
+  font-weight: bold !important;
+  font-size: 45px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.right-panel p {
+  margin: 5px 0;
+  padding: 0;
+  font-size: 21px;
+  font-weight: 400;
+}
+.left-panel {
+  background: #ff816e;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  max-width: 50%;
+  flex-direction: column;
+  padding: 50px 88px 50px 88px;
+}
+
+.formDiv {
+  width: 100%;
+  max-width: 600px;
+}
+
+.left-panel .text-overlay {
+  padding: 15px 25px;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: left;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  /* background: #00000014; */
+  background-color: #ff674f;
+}
+.spin-icon {
+  animation: spin 1s linear infinite;
+  color: #b5b7c0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 28feb */
+.footer {
+  width: 90% !important;
+  position: initial;
+  padding-top: 10px;
+  width: 100%;
+  z-index: 9999;
+  text-align: right;
+  color: #f13624;
+  cursor: pointer;
+
+  /* position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  z-index: 9999;
+  text-align: right;
+  color: #f13624;
+  cursor: pointer;
+  padding: 20px 60px; */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container img {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  cursor: pointer;
+}
+.footer > svg {
+  font-size: 28px;
+}
+
+.dashboard_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 340px;
+  margin-top: 20px;
+}
+.right-panel p {
+  margin: 0 0 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* old */
+
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 120px;
+}
+
+.appBar > div {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.login-container-inner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  /* border: 1px solid #ffffff; */
+  box-shadow: 0px 12px 22px 0px #312c2c1f;
+}
+
+/* .login-container-inner .left-panel img{
+  margin: 57px 122px 63px 122px;
+} */
+
+.login-text {
+  margin-bottom: 82px !important;
+}
+
+.footer-item p {
+  min-width: unset !important;
+}
+.logo-text {
+  font-size: 16px !important;
+}
+
+.content-container {
+  padding: 90px 100px 100px 100px !important;
+}
+
+.headings-con ul {
+  list-style: none;
+  border-left: 1px solid black;
+}
+.headings-con ul li {
+  padding: 8px 0px;
+  cursor: pointer;
+}
+
+.nav-con nav {
+  background-color: #f9d94e;
+  padding-bottom: 5px;
+}
+.nav-con nav .logo-text {
+  border: 1px solid #000;
+  padding: 4px 15px;
+  border-radius: 3px;
+  letter-spacing: 0.3px;
+}
+.nav-con nav .logo-text img {
+  vertical-align: middle;
+  width: 15px;
+  margin-right: 8px;
+}
+.right-container .h1 {
+  font-size: 40px; /* Main heading size */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222; /* Slightly darker for emphasis */
+}
+.right-container h1:after {
+  content: "";
+  background: #f13624;
+  width: 73px;
+  height: 4px;
+  display: block;
+  margin-top: 15px;
+}
+.right-container .h2 {
+  font-size: 32px; /* Main heading size */
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222; /* Slightly darker for emphasis */
+}
+.right-container .p {
+  font-size: 18px !important; /* Body text size */
+  line-height: 1.6; /* Proper line height for readability */
+  margin-bottom: 20px;
+}
+
+.right-container .content-box2 .h3 {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 24px; /* Sub-subheading size */
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.right-container ul li {
+  font-size: 18px; /* Body text size */
+  line-height: 1.6; /* Proper line height for readability */
+  margin-bottom: 10px;
+}
+
+.right-container ul li span {
+  font-weight: bold;
+  margin-right: 8px;
+}
+.left-con-inner{
+  position: sticky;
+  top: 120px;
+}
+
+/* FAQ section styling start  */
+.faq-container {
+  width: 100%;
+  padding-bottom: 15px;
+}
+.expanded {
+  transform: rotate(90deg);
+}
+.content-box {
+  scroll-margin-top: 120px;
+}
+.question {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 25px;
+  /* background-color: #024d21; */
+  background: #f13624;
+  text-align: left;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.answer {
+  color: rgb(85, 85, 85);
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 25px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  text-align: left;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  /* border-radius: 20px; */
+}
+/* FAQ section styling end  */
+
+@media screen and (min-width: 1240px) and (max-width: 1540px) {
+  .login-container {
+    padding: 90px 100px 100px 100px !important;
+  }
+  .content-container {
+    padding: 90px 100px 100px 100px !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .right-panel h2 {
+    font-size: 34px;
+  }
+  .left-panel .text-overlay {
+    font-size: 14px;
+  }
+  .right-panel-inner {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1239px) {
+  .login-container {
+    padding: 90px 50px 100px 50px !important;
+  }
+  .content-container{
+    padding: 90px 50px 100px 50px !important;
+    gap: 40px !important;
+  }
+  .left-container{
+    max-width: 40% !important;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  /* 7march */
+  .login-container-inner {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    flex-direction: column-reverse !important;
+    box-shadow: 0px 12px 22px 0px #999 !important;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  .login-container-inner .right-panel {
+    padding-bottom: 50px;
+  }
+  .login-container-inner .left-panel img.loginImg {
+    min-height: unset;
+  }
+  .login-container-inner .right-panel h2 span {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  .login-container-inner .login-text {
+    margin-bottom: 0 !important;
+  }
+  .login-container {
+    padding: 90px 20px 100px 20px !important;
+  }
+  .content-container {
+    padding: 90px 20px 100px 20px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .right-panel {
+    flex-basis: 100%;
+    max-width: 100%;
+    order: 0;
+  }
+  .left-panel {
+    flex-basis: 100%;
+    max-width: 90%;
+  }
+  .login-container {
+    overflow: visible;
+    height: auto;
+  }
+  .formDiv {
+    margin: 0 auto;
+  }
+  .right-panel h2 {
+    margin-top: 0;
+  }
+  .left-panel {
+    padding: 20px 0;
+  }
+  .loginImg {
+    max-width: 490px;
+  }
+  .login-container-inner {
+    flex-direction: column !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .right-panel h2 {
+    font-size: 26px;
+  }
+  .right-panel p {
+    font-size: 16px;
+  }
+  .right-panel form {
+    margin-top: 20px;
+  }
+  .login-container-inner .right-panel h2 span {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .footer-item .MuiBox-root {
+    text-align: center;
+  }
+  .footer-item h5 {
+    font-size: 16px;
+  }
+  .footer-address {
+    align-items: center;
+    min-height: unset;
+  }
+  .footer-address p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .appBar-button-container button {
+    font-size: 12px !important;
+    padding: 6px 7px;
+  }
+  .logo-container img {
+    width: 100px;
+  }
+  .content-container {
+    flex-direction: column;
+  }
+  .content-container .left-container {
+    display: none;
+  }
+  .right-container .h1 {
+    font-size: 24px; /* Main heading size */
+  }
+  .right-container .h2 {
+    font-size: 24px; /* Main heading size */
+  }
+  .content-box .p {
+    font-size: 14px !important;
+  }
+  .content-box li {
+    font-size: 14px !important;
+  }
+  .FAQ-con{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .question{
+    padding: 20px;
+  }
+  .question span{
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  .answer{
+    font-size: 14px;
+    padding: 16px;
+  }
+  
+}
+
+@media screen and (min-width: 599px) and (max-width: 992px) {
+  .logo-text {
+    font-size: 12px !important;
+    text-align: center;
+  }
+  .appBar-button-container button {
+    font-size: 12px !important;
+    padding: 6px 7px;
+  }
+  .content-container {
+    flex-direction: column;
+  }
+  .content-container .left-container {
+    display: none;
+  }
+  .right-container .h1 {
+    font-size: 30px; /* Main heading size */
+  }
+  .right-container .h2 {
+    font-size: 30px; /* Main heading size */
+  }
+  .content-box .p {
+    font-size: 16px !important;
+  }
+  .content-box li {
+    font-size: 16px !important;
+  }
+  .question span{
+    font-size: 16px;
+  }
+  .answer{
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .login-container {
+    padding: 45px 20px !important;
+  }
+  .content-container {
+    padding: 45px 20px !important;
+  }
+}

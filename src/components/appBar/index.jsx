@@ -22,6 +22,10 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import graphImg from '@/../public/assets/arrow-upper-right.png';
+import { useDispatch } from "react-redux";
+import * as authAction from "@/redux/auth/actions";
+import { useRouter } from "next/navigation";
+import Image from 'next/image';
 
 const drawerWidth = 240;
 
@@ -35,6 +39,8 @@ const AppBarComponent = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [isDashboard, setIsDashboard] = useState(false);
   const open = Boolean(anchorEl);
+  const dispatch = useDispatch();
+  const router = useRouter();
   
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -55,8 +61,7 @@ const AppBarComponent = () => {
     window.location.href = "https://www.webspero.com/";
   };
   const isRobotToolDashboard = () => {
-    if (typeof window === "undefined") return false;
-    return window.location.href.includes("/dashboard");
+    return localStorage.getItem("authToken") ? true : false;
   };
 
 
@@ -65,7 +70,8 @@ const AppBarComponent = () => {
   }, []);
   
   const handleLogout = () => {
-    dispatch(authAction.logOut());
+    
+    dispatch(authAction.logOut(router));
   };
 
 
@@ -139,7 +145,7 @@ const AppBarComponent = () => {
               className="logo-text"
               display={{ xs: "none", sm: "block" }}
             >
-               <img  src={graphImg}/>
+               <Image width={15} height={29} src='/assets/arrow-upper-right.png' alt="arrow-upper-right"/>
               Get Our SEO Experts Help You Grow Your Business
             </Typography>
             <Typography></Typography>

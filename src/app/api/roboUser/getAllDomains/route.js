@@ -27,8 +27,8 @@ export async function GET(req) {
     }
 
     // Return first 5 domains
-    const first5Domains = user.domains.slice(0, 5);
-    return NextResponse.json({ data: first5Domains });
+    const Domains = user.domains;
+    return NextResponse.json({ data: Domains });
 
   } catch (err) {
     return NextResponse.json({ error: "Server error", details: err.message }, { status: 500 });

@@ -30,7 +30,7 @@ export const verifyCode = (data, router) => async (dispatch) => {
     // dispatch(toastActions.showToast("success", "Verification successful!"));
     localStorage.setItem("authToken", token);
     if (token) {
-      router.push(`/dashboard?token=${token}`);
+      router.push(`/dashboard`);
     }
   } catch (err) {
     console.log("Verify fail", err);
@@ -65,11 +65,15 @@ export const getUser = () => async (dispatch) => {
   }
 };
 
-export const logOut = () => async (dispatch) => {
+export const logOut = (router) => async (dispatch) => {
   try {
     dispatch({ type: constants.LOGOUT_REQUEST });
+    const res = await api.get(apiUrl.LOGOUT_USER);
     setTimeout(() => {
-      dispatch({ type: constants.LOGOUT_SUCCESS });
+      dispatch({ type: constants.LOGOUT_SUCCESS, payload: res?.data });
+      if (res?.data?.redirect) {
+        router.push(res?.data?.redirect);
+      }
       // dispatch(toastActions.showToast("success", "Logout successfully!"));
     }, 100);
   } catch (err) {

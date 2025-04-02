@@ -30,8 +30,9 @@ export const addDomain = (data) => async (dispatch) => {
     // );
   } catch (err) {
     console.log("Add domain fail", err);
+    const response = err?.response?.data?.error;
     dispatch({ type: constants.ADD_NEW_DOMAIN_FAIL });
-    await dispatch(toastActions.showToast("error", "Failed to add domain!"));
+    await dispatch(toastActions.showToast("error", response));
   }
 };
 
@@ -39,14 +40,14 @@ export const deleteDomain = (id) => async (dispatch) => {
   try {
     dispatch({ type: constants.DELETE_DOMAIN_REQUEST });
     const res = await api.delete(`${apiUrl.DELETE_DOMAIN_API}/${id}`);
+
+    console.log("delete domain res", res);
     dispatch({
       type: constants.DELETE_DOMAIN_SUCCESS,
       payload: res?.data?.data,
     });
-    await dispatch(
-      // toastActions.showToast("success", "Domain deleted successfully!")
-    );
   } catch (err) {
+    console.log("prrakash chai")
     console.log("Delete domain fail", err);
     dispatch({ type: constants.DELETE_DOMAIN_FAIL });
     await dispatch(toastActions.showToast("error", "Failed to delete domain!"));

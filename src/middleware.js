@@ -1,22 +1,32 @@
 import { NextResponse } from 'next/server';
 
 export function middleware(request) {
-    console.log("testing middleware")
-  // Get the token from cookies
-  const token = request.cookies.get('authToken')?.value;
+    console.log("Middleware executing...");
 
-  // Define protected routes
-  const protectedRoutes = ['/register'];
+    // Get the token from cookies
+    const token = request.cookies.get('authToken')?.value;
+    console.log("Token from cookies:", token);
 
-  // If no token and trying to access a protected route, redirect to login
-  if (!token && protectedRoutes.includes(request.nextUrl.pathname)) {
-    return NextResponse.redirect(new URL('/home', request.url));
-  }
+    // Define protected and restricted routes
+    const authRoutes = [ '/','/login', '/register']; // Routes that should be accessible only when not logged in
+    const protectedRoutes = ['/dashboard']; // Routes that should be accessible only when logged in
 
-  return NextResponse.next(); // Allow access if authenticated or public route
+    const currentPath = request.nextUrl.pathname;
+
+    // If the user is logged in and tries to access an auth route, redirect to dashboard
+    if (token && authRoutes.includes(currentPath)) {
+        return NextResponse.redirect(new URL('/dashboard', request.url));
+    }
+
+    // If the user is NOT logged in and tries to access a protected route, redirect to login
+    if (!token && protectedRoutes.includes(currentPath)) {
+        return NextResponse.redirect(new URL('/', request.url));
+    }
+
+    return NextResponse.next(); // Allow access otherwise
 }
 
-// Apply middleware to specific routes
+// Apply middleware to relevant routes
 export const config = {
-  matcher: ['/register'], // List protected routes here
+    matcher: ['/login', '/register', '/dashboard', "/"],
 };

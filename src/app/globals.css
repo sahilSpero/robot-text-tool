@@ -330,6 +330,79 @@ body {
 }
 /* FAQ section styling end  */
 
+
+/* not-found  styling start  */
+
+/* 404.css - Styling for the custom 404 page */
+.page-not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.illustration {
+  margin-top: 60px;
+}
+
+.error-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+ 
+.page-not-found-container .button {
+  margin-top: 20px;
+  background-color: #f13624;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #f13624;
+  border: 1px solid #f13624;
+}
+.button:active {
+  background-color: #f44336;
+}
+
+
+/* not-found  styling end  */
+
+
 @media screen and (min-width: 1240px) and (max-width: 1540px) {
   .login-container {
     padding: 90px 100px 100px 100px !important;

@@ -41,13 +41,14 @@ const Footer1 = () => {
               }}>
                 {/* Icon/Image */}
                 <img
-                  src={item.img}
+                  src={item.img.src}
                   alt={`${item.id} office`}
                   style={{
                     height: "90px",
                     width: "76px",
                   }}
                 />
+                {console.log(item, "item")}
 
                 {/* Location Name */}
                 <Typography variant="h5" sx={{ mb: "14px" , mt : "9px"}}>

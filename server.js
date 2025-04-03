@@ -17,7 +17,7 @@ const handle = app.getRequestHandler();
 const fromMail = process.env.fromMail;
 const sendGrid = process.env.sendGrid;
 const JWT_SECRET = process.env.JWT_SECRET;
-console.log(fromMail, "fromMailssss");
+
 
 sgMail.setApiKey(sendGrid);
 

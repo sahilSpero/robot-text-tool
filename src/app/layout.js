@@ -7,6 +7,7 @@ import theme from "../theme";
 import Toast from "../components/toast";
 import "@fontsource/poppins";
 import AppBarComponent from "@/components/appBar";
+import Footer1 from "@/components/Footer1/Index";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,6 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
-  console.log("testing layout");
   return (
     <html lang="en">
       <body>
@@ -36,6 +36,7 @@ export default function RootLayout({ children }) {
             <AppBarComponent />
             {children}
             <Toast />
+            <Footer1 />
           </ThemeRegistry>
         </Providers>
       </body>

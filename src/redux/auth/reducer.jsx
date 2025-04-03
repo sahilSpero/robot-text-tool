@@ -89,8 +89,13 @@ const auth = (state = initialState, action = {}) => {
       return {
         ...state,
         isLoggingOut: true,
+        token : null
       };
     case constants.LOGOUT_SUCCESS:
+      return {
+        ...state,
+        isLoggingOut: true,
+      };
     case constants.LOGOUT_FAIL:
       return {
         ...state,

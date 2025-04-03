@@ -22,7 +22,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import graphImg from '@/../public/assets/arrow-upper-right.png';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import * as authAction from "@/redux/auth/actions";
 import { useRouter } from "next/navigation";
 import Image from 'next/image';
@@ -37,11 +37,13 @@ const AppBarComponent = () => {
   const [developmentHover, setDevelopmentHover] = useState(false);
   const [aboutHover, setAboutHover] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
-  const [isDashboard, setIsDashboard] = useState(false);
-  const open = Boolean(anchorEl);
-  const dispatch = useDispatch();
+
+  const open = Boolean(anchorEl);    
+  const dispatch = useDispatch();   
   const router = useRouter();
-  
+
+  const { token } = useSelector((state) => state.auth);
+
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
@@ -60,17 +62,13 @@ const AppBarComponent = () => {
   const handleLogoClick = () => {
     window.location.href = "https://www.webspero.com/";
   };
-  const isRobotToolDashboard = () => {
-    return localStorage.getItem("authToken") ? true : false;
-  };
 
 
-  useEffect(() => {
-    setIsDashboard(isRobotToolDashboard());
-  }, []);
-  
+
+
   const handleLogout = () => {
-    
+    localStorage.removeItem("authToken") 
+    setIsLoggedIn(false)
     dispatch(authAction.logOut(router));
   };
 
@@ -256,7 +254,7 @@ const AppBarComponent = () => {
               Schedule a Call
             </Button>
 
-            {isDashboard && (
+            { token  && (
               <Button
                 onClick={handleLogout}
                 sx={{
